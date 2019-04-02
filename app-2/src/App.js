@@ -5,35 +5,24 @@ import './App.css';
 class App extends Component {
   constructor(){
     super()
-    this.state= {
-      food: ['crab','sushi','pizza','cereal','spaghetti','otter']
+    this.state = {
+      myFaveThings: ['Glock 43x', 'DPMS Recon', 'Pizza', 'Football', 'March Madness', 'NBA Finals']
     }
-
-
   }
 
-
-  render() {
-    let myFoods = this.state.food.map((el, i) => {
-      return(
-        <h4 key={i}> { el } </h4>
+  render(){
+    let allFaveThings = this.state.myFaveThings.map((el, i) => {
+      return (
+        <li key={i} > {el} </li>
       )
     })
     return (
-      <div className= 'App'> 
-        {myFoods}
+      <div> 
+        <h1> ALL MY FAVORITE THINGS </h1>
+        {allFaveThings}
       </div>
     )
   }
-    
-  
-  //   return (
-  //     <div className="App">
-  //       <h4> { this.state.food.toString() } </h4>
-        
-  //     </div>
-  //   );
-  // }
 }
 
 export default App;

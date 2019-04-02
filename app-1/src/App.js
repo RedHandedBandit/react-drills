@@ -6,23 +6,25 @@ class App extends Component {
   constructor(){
     super()
     this.state = {
-      text: ''
+      message: ''
     }
   }
 
   handleChange(val){
-    this.setState({text: val})
+    this.setState({message: val})
   }
 
-  render() {
-    console.log(this.state)
+  render(){
     return (
-      <div className="App">
-        <input onChange= {(e) => this.handleChange(e.target.value)} />
-        <p> {this.state.text} </p>
+      <div> 
+        <h1> 
+          RedHand3dBandit
+        </h1>
+        <input onChange={(e) => {this.handleChange(e.target.value)}} /> 
+        <h4> {this.state.message} </h4>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
