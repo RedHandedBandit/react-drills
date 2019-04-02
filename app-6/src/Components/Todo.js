@@ -2,7 +2,6 @@ import React from 'react';
 
 export default function Todo (props) {
   return (
-    <p>{ props.task }</p>
+    <div> {props.listItem} </div>
   )
 }
-// i need to understand properties
